@@ -1,0 +1,8 @@
+﻿loan_id,borrower,balance,rate,maturity,status,notes,zqx_canary_hdr_5520
+00017,"Alpha, LLC",1000.50,5.25,2027-01-15,current,,a
+00018,"Beta ""Quoted"" Inc",2000.00,6.00,2028-03-31,current,"first line
+second line",b
+00019,Müller & Søn GmbH,3000.25,4.75,2026-12-01,watchlist,N/A,c
+ZQX-LOAN-88231,ZQXCANARY-borrower-4417 Holdings,918273645.19,7.125,2029-06-30,current,ZQXCANARY-note-secret-9931,zqx.canary.4417@example.invalid
+00021,Delta Partners,5500.00,5.00,2027-09-30,delinquent,  padded  ,e
+00022,Epsilon; Semi,0.00,0.00,2030-01-01,current,,f

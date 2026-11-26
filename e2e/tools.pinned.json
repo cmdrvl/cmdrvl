@@ -1,0 +1,116 @@
+{
+  "tools": {
+    "airlock": {
+      "sha256": {
+        "airlock-0.4.0-aarch64-apple-darwin.tar.gz": "f267b1d714758bffa0a569de900e9a0440fe01631a42620c44e02ed3c120cff0",
+        "airlock-0.4.0-x86_64-apple-darwin.tar.gz": "eaed5cefc33d1e98fd566e7a264a7041cbab86725ee0bf30c1213d70a3228d9d",
+        "airlock-0.4.0-x86_64-unknown-linux-gnu.tar.gz": "70f334ae2528bd4300dcd9c2f06fc2dadc32c0d6d17bf8ee81be6aacf25fbcc1"
+      },
+      "tag": "v0.4.0"
+    },
+    "assess": {
+      "sha256": {
+        "assess-v0.4.1-aarch64-apple-darwin.tar.gz": "07a7e609155e78c773e7083288409cd40d0526ba8364935515861bb5a2af3310",
+        "assess-v0.4.1-x86_64-apple-darwin.tar.gz": "9193d0cf5ed3c5e907c756362fe06cb48da9f8ab9d628101e54445e1bd10b562",
+        "assess-v0.4.1-x86_64-unknown-linux-gnu.tar.gz": "19c1e04554e03ea9a1b4de3bffc29ed3152799682d64b73f0dc21d02e57b51e8"
+      },
+      "tag": "v0.4.1"
+    },
+    "benchmark": {
+      "sha256": {
+        "benchmark-v0.4.0-aarch64-apple-darwin.tar.gz": "0014104bb9ff568f336f93fa0c6c462c72f14b0726ed8fdbce3da8d60eef59e1",
+        "benchmark-v0.4.0-x86_64-apple-darwin.tar.gz": "e86ab1fc01463ab0b429bc81df40d966f335592ed4ec0da625298e78ad542b82",
+        "benchmark-v0.4.0-x86_64-unknown-linux-gnu.tar.gz": "847a0342676c3794781db183477b986d5eb38e069cb148b7432832aaf8ff72fc"
+      },
+      "tag": "v0.4.0"
+    },
+    "fingerprint": {
+      "sha256": {
+        "fingerprint-v0.13.0-aarch64-apple-darwin.tar.gz": "dd2045db4388d3a258298f021c9f36360a0c46ccc04d23c46a3a0fc6d54dc176",
+        "fingerprint-v0.13.0-x86_64-apple-darwin.tar.gz": "bc9336b298756327c0c03bc51044bb005793696d017b0ca98a6881a9dbe6efc3",
+        "fingerprint-v0.13.0-x86_64-unknown-linux-gnu.tar.gz": "aa3be5543b00b542fbc75e3193fbf1aed3f2a56ae25b3f6a9e0594c51e5f6e9d"
+      },
+      "tag": "v0.13.0"
+    },
+    "hashbytes": {
+      "sha256": {
+        "hashbytes-v0.6.0-aarch64-apple-darwin.tar.gz": "8b7fe303bdb3a06e6851f61578fdd5ac6792a1709ffc474d8a1add7fb2f45b64",
+        "hashbytes-v0.6.0-x86_64-apple-darwin.tar.gz": "846fc2ff670fe3b03f2551f51ddc68caaceb9a79631d1f57280e06076a23df13",
+        "hashbytes-v0.6.0-x86_64-unknown-linux-gnu.tar.gz": "a29078b4e00484370a27a4e59deb026009230f41bd7b7b9403a6d3b20986e2be"
+      },
+      "tag": "v0.6.0"
+    },
+    "lock": {
+      "sha256": {
+        "lock-0.7.1-aarch64-apple-darwin.tar.gz": "29299448ba734f87374f55cba2f6fb283e0980dfd48b2c339a95fdf573d6436e",
+        "lock-0.7.1-x86_64-apple-darwin.tar.gz": "673b15896f4fd14328365c9184789f1baef48d4a51078d5b2e66ae05acc1227b",
+        "lock-0.7.1-x86_64-unknown-linux-gnu.tar.gz": "3598ad62919362b0e7344b05f4d00ecbb7e381efc39badb197d44fb3c4a0ae80"
+      },
+      "tag": "v0.7.1"
+    },
+    "pack": {
+      "sha256": {
+        "pack-0.7.2-aarch64-apple-darwin.tar.gz": "21acc8fc38e227ad8f8688f418c6b78216cd3da8d015ccadadc6f92a4e785748",
+        "pack-0.7.2-x86_64-apple-darwin.tar.gz": "5d0926992fcf1ca73c93389b8dae19442896382e11129e7bcb47f1e9945847b9",
+        "pack-0.7.2-x86_64-unknown-linux-gnu.tar.gz": "3b9d4aac2e833fd601acd7d2ff7f6f9b3876b52b85bf8eee28e4f2a18475ccab"
+      },
+      "tag": "v0.7.2"
+    },
+    "profile": {
+      "sha256": {
+        "profile-v0.12.1-aarch64-apple-darwin.tar.gz": "b776c813fd5bb4906ac574e6cfc057dc8bab7b895b35625380ff771ecdc5cc10",
+        "profile-v0.12.1-x86_64-apple-darwin.tar.gz": "0a028fc2b780d9f6e77cf779035cad26e8383e862253928c47f74ff0cbf858bd",
+        "profile-v0.12.1-x86_64-unknown-linux-gnu.tar.gz": "755c0b10a7b6b0afc2236630bab72a06a4acef24f40c4d4629cb3479c7113daa"
+      },
+      "tag": "v0.12.1"
+    },
+    "rvl": {
+      "sha256": {
+        "rvl-v0.9.2-aarch64-apple-darwin.tar.gz": "2af8a46db355c56e7931474c56307f425be749bd23d5e37905b90f75fd5b521c",
+        "rvl-v0.9.2-x86_64-apple-darwin.tar.gz": "0bd63124e4191d821adbf2acb424875d077118779de28bbebb56ab0ed7e1f2c0",
+        "rvl-v0.9.2-x86_64-unknown-linux-gnu.tar.gz": "6d87efa89471d5a9eabc19fc3ed0c547ab6008b8b6365b391be45b0c731c9c38"
+      },
+      "tag": "v0.9.2"
+    },
+    "shape": {
+      "sha256": {
+        "shape-v0.10.1-aarch64-apple-darwin.tar.gz": "602c1f19e8bf37d4f6192ab18f0571741bfca4629a7fbfdec231c4a0657daa26",
+        "shape-v0.10.1-x86_64-apple-darwin.tar.gz": "98c80485568e5c1cb2324e44ac4a4f7ee69389bd4f12446e5014142922423cfe",
+        "shape-v0.10.1-x86_64-unknown-linux-gnu.tar.gz": "1031f688d0434629c75c0296b044139eb0735ee0267b43606c5c3b87541f7685"
+      },
+      "tag": "v0.10.1"
+    },
+    "twinning": {
+      "sha256": {
+        "twinning-v0.7.1-aarch64-apple-darwin.tar.gz": "8b5e791fc3629984100536bba698a1ab33dac0d4afddab3dfc42bb56c0289481",
+        "twinning-v0.7.1-x86_64-apple-darwin.tar.gz": "5aee77f84f8bf57bd87355e4db8b8cc47afb412e87726cbd8e977ec0dc50e3bc",
+        "twinning-v0.7.1-x86_64-unknown-linux-gnu.tar.gz": "cc092e67d86e1a429080610287c38b1e9e4508777f124ce91c33d8e0bd7f90cd"
+      },
+      "tag": "v0.7.1"
+    },
+    "vacuum": {
+      "sha256": {
+        "vacuum-v0.6.1-aarch64-apple-darwin.tar.gz": "525870f3ddb54886109c7a2273c6ecfefdf352df3d1279d81c2ef893e884488c",
+        "vacuum-v0.6.1-x86_64-apple-darwin.tar.gz": "341fc6667efc24356fe0cb2541b55c059ff75a7011e007a562788ccf723745af",
+        "vacuum-v0.6.1-x86_64-unknown-linux-gnu.tar.gz": "f656ad0b42404c339b2a2f2ef7e6e61e535da7cd452e03a968378707d8121931"
+      },
+      "tag": "v0.6.1"
+    },
+    "veil": {
+      "sha256": {
+        "veil-v0.4.2-darwin-arm64.tar.gz": "019c4ae9a1ead680f5ef49a4ba85e21b24bb15cbfe984f569fe4674fadd6b718",
+        "veil-v0.4.2-darwin-x86_64.tar.gz": "4c57de9b2c7f73a60bc4a229eff8837d71c898e37aa46715004c154e90f99bf8",
+        "veil-v0.4.2-linux-x86_64.tar.gz": "5877e5a184637c28ac17a9b3a1193b2e4333036f73a930f55ab72488f2e5793a"
+      },
+      "tag": "v0.4.2"
+    },
+    "verify": {
+      "sha256": {
+        "verify-v0.7.5-aarch64-apple-darwin.tar.gz": "28fe07e8ae2f9c7ffc842c62aeef092780bd6e05214adc5847984b474fb62c8e",
+        "verify-v0.7.5-x86_64-apple-darwin.tar.gz": "162e4b826bac076a996c123277d98fa1b7594c7d6adc2fb65401070ee309ae75",
+        "verify-v0.7.5-x86_64-unknown-linux-gnu.tar.gz": "a8dc5c16610e8ac551be59a8e1fec3dcab81d2f3a5228c023d2135aa851f7b12"
+      },
+      "tag": "v0.7.5"
+    }
+  }
+}

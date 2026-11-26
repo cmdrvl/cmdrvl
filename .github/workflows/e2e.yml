@@ -1,0 +1,51 @@
+name: spine-e2e
+
+# Runs the released spine binaries against each other. See e2e/README.md.
+on:
+  schedule:
+    - cron: "23 7 * * *"
+  workflow_dispatch:
+    inputs:
+      pinned:
+        description: "Use e2e/tools.pinned.json instead of the latest releases"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: spine-e2e-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  e2e:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+
+      - name: Fetch released binaries and check them against SHA256SUMS
+        env:
+          PINNED: ${{ inputs.pinned }}
+        run: |
+          if [ "$PINNED" = "true" ]; then
+            python3 -m e2e.fetch --out "$RUNNER_TEMP/spine" --pinned e2e/tools.pinned.json
+          else
+            python3 -m e2e.fetch --out "$RUNNER_TEMP/spine"
+          fi
+
+      - name: Run the three pipelines
+        run: python3 -m e2e.run --tools "$RUNNER_TEMP/spine" --report "$RUNNER_TEMP/e2e-report"
+
+      # The report holds versions, test names and check results, not tool output.
+      - name: Upload the report
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: spine-e2e-report
+          path: ${{ runner.temp }}/e2e-report
+          if-no-files-found: warn
+          retention-days: 14
