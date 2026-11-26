@@ -20,6 +20,11 @@
       "bead": "bd-9pck",
       "summary": "For XLSX and Parquet input shape reports a CSV dialect."
     },
+    "profile-inspect-numeric-extremes": {
+      "repo": "cmdrvl/profile",
+      "bead": "bd-s5a",
+      "summary": "profile inspect prints exact numeric cell values (min and max) in default mode."
+    },
     "veil-allows-explicit-on-protected": {
       "repo": "cmdrvl/veil",
       "bead": "bd-en1",
