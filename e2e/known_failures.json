@@ -34,11 +34,6 @@
       "repo": "cmdrvl/twinning",
       "bead": "bd-709s",
       "summary": "With --port 0 --serve twinning prints nothing until shutdown, so a client must ask the operating system for the port."
-    },
-    "twinning-embedded-verify-raw-values": {
-      "repo": "cmdrvl/twinning",
-      "bead": "bd-uk5d",
-      "summary": "The default report from twinning's embedded verify carries raw row keys and cell values; standalone verify redacts them."
     }
   }
 }

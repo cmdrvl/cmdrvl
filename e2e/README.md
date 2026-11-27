@@ -34,7 +34,7 @@ owning repo. Its test asserts the current wrong behaviour exactly, so:
 |---|---|
 | `tests/test_tabular.py` | vacuum, hashbytes (blake3 and sha256), fingerprint, lock, lock verify, profile, shape, rvl (both modes), verify, assess, benchmark, pack seal / verify / render; every `--lock` consumer against drifted files |
 | `tests/test_boundary.py` | veil's hook on protected files, then the authorized tools themselves; `airlock gate` in policy-proxy mode: streaming, blocking, receipts |
-| `tests/test_twin.py` | `verify compile` into `twinning postgres --port 0`, rows loaded over the wire, embedded verify, pack seal / verify |
+| `tests/test_twin.py` | `verify compile` into `twinning postgres --port 0`, rows loaded over the wire, embedded verify with passing, failing and refused checks, redacted by default and raw with `--explicit`, pack seal / verify |
 | `tests/test_fetch.py`, `tests/test_harness.py` | the downloader's refusals and the proof that the leak and known-failure checks can fail; no binaries or network needed |
 
 ## Leak checks
@@ -47,10 +47,15 @@ a path or a policy name, it shows that the channel is scanned, not that a cell
 value could have reached it. The detector cannot see a canary that was
 compressed, encrypted, hashed, split, truncated or rounded.
 
-Three things are removed before scanning, each in plain sight in the tests:
+For twinning's embedded verify, in a failing and in a refused check, the report
+on stdout, the `--report` file and the sealed pack are each scanned whole. Each
+one's control is the same surface of an `--explicit` run, which must show every
+canary the default run had to keep off it. twinning's stderr and its duplicate-key
+error carry no verify report, so their control is only the snapshot.
+
+Two things are removed before scanning, each in plain sight in the tests:
 
 - `profile inspect`'s numeric summary for `balance` (a known failure);
-- `verify.results[0].affected` in twinning's report (a known failure);
 - benchmark's `failures[].entity`, which repeats the caller's own gold file.
 
 ## Data
