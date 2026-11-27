@@ -2,7 +2,9 @@
 
 > *One CLI front door for deterministic, agent-native data workflows.*
 
-**Status:** Early scaffolding. The underlying open-source spine tools are live today under [github.com/cmdrvl](https://github.com/cmdrvl) and [`cmdrvl/homebrew-tap`](https://github.com/cmdrvl/homebrew-tap); `cmdrvl` is the unified porcelain CLI and local workflow runner being built on top of them.
+**Status:** Early scaffolding. The underlying open-source CLI tools are live today under [github.com/cmdrvl](https://github.com/cmdrvl) and [`cmdrvl/homebrew-tap`](https://github.com/cmdrvl/homebrew-tap); `cmdrvl` is the unified porcelain CLI and local workflow runner being built on top of them.
+
+> **Looking for zero-install browser verification?** Use **[`@cmdrvl/web`](https://github.com/cmdrvl/web)** to run the same Rust verification engines (`verify ground`, `redline`, `SHA-256`, `BLAKE3`) directly in a browser tab or Claude Artifact with zero server and zero file uploads. Use `cmdrvl` and the CLI suite below for local terminal workflows, AI coding agents, CI pipelines, and large datasets.
 
 For the full end-to-end architectural blueprint — the **L0–L10 Epistemic Tower**, **Boundary Plane (`veil` + `airlock`)**, **Counterfactual Twin Plane (`twinning`)**, **Fractal `control.v0` Grammar**, **4 Accretion Ratchets**, and **Multi-Agent Handoff** — see **[docs/SYSTEM_ARCHITECTURE.md](./docs/SYSTEM_ARCHITECTURE.md)**.
 
