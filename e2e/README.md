@@ -53,10 +53,8 @@ one's control is the same surface of an `--explicit` run, which must show every
 canary the default run had to keep off it. twinning's stderr and its duplicate-key
 error carry no verify report, so their control is only the snapshot.
 
-Two things are removed before scanning, each in plain sight in the tests:
-
-- `profile inspect`'s numeric summary for `balance` (a known failure);
-- benchmark's `failures[].entity`, which repeats the caller's own gold file.
+One thing is removed before scanning, in plain sight in the tests:
+benchmark's `failures[].entity`, which repeats the caller's own gold file.
 
 ## Data
 

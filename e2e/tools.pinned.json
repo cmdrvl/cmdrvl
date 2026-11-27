@@ -58,11 +58,11 @@
     },
     "profile": {
       "sha256": {
-        "profile-v0.12.1-aarch64-apple-darwin.tar.gz": "b776c813fd5bb4906ac574e6cfc057dc8bab7b895b35625380ff771ecdc5cc10",
-        "profile-v0.12.1-x86_64-apple-darwin.tar.gz": "0a028fc2b780d9f6e77cf779035cad26e8383e862253928c47f74ff0cbf858bd",
-        "profile-v0.12.1-x86_64-unknown-linux-gnu.tar.gz": "755c0b10a7b6b0afc2236630bab72a06a4acef24f40c4d4629cb3479c7113daa"
+        "profile-v0.13.0-aarch64-apple-darwin.tar.gz": "b3b516de66832f683e785122681a4f45799b51c3db66fe6cafa5f1153324a3c4",
+        "profile-v0.13.0-x86_64-apple-darwin.tar.gz": "a67f8cb78ba757ed9327781b9c6cb862480ceede19ed3f4fcd65ea51399e5aeb",
+        "profile-v0.13.0-x86_64-unknown-linux-gnu.tar.gz": "6058a5e62321d98590b9e6a66039b3f081af1b813bc5b2d08cfd04eb5fd2832b"
       },
-      "tag": "v0.12.1"
+      "tag": "v0.13.0"
     },
     "rvl": {
       "sha256": {
@@ -106,11 +106,11 @@
     },
     "verify": {
       "sha256": {
-        "verify-v0.7.5-aarch64-apple-darwin.tar.gz": "28fe07e8ae2f9c7ffc842c62aeef092780bd6e05214adc5847984b474fb62c8e",
-        "verify-v0.7.5-x86_64-apple-darwin.tar.gz": "162e4b826bac076a996c123277d98fa1b7594c7d6adc2fb65401070ee309ae75",
-        "verify-v0.7.5-x86_64-unknown-linux-gnu.tar.gz": "a8dc5c16610e8ac551be59a8e1fec3dcab81d2f3a5228c023d2135aa851f7b12"
+        "verify-v0.7.6-aarch64-apple-darwin.tar.gz": "5b77ea01ae8cb43edfad8050f0cd1274dbaa82f2a94f759e869140cd5702450c",
+        "verify-v0.7.6-x86_64-apple-darwin.tar.gz": "5a01301fbb880c6c31f0ebac9187b5b0e72dfcca593363b1777a0570d2f49e7e",
+        "verify-v0.7.6-x86_64-unknown-linux-gnu.tar.gz": "99f3ab69ee2ebfcd5b9a3d1f8b47360bde96e65e9d8b1c17e3f253019bd97b7b"
       },
-      "tag": "v0.7.5"
+      "tag": "v0.7.6"
     }
   }
 }

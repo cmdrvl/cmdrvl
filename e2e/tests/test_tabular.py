@@ -139,13 +139,17 @@ class TabularPipeline(E2ETestCase):
         columns = report.get("result", report)["columns"]
         self.assertEqual(len(columns), self.expected["columns"])
         balance = columns[source.COLUMNS.index("balance")]
-        numeric = balance.get("numeric") or {}
-        self.known("profile-inspect-numeric-extremes",
-                   numeric.get("max") == float(source.CANARY_AMOUNT_OLD), numeric)
-        # Apart from that numeric summary, the report must be clean.
-        del balance["numeric"]
-        self.assert_redacted(f"profile inspect {fmt}, except the balance numeric summary",
-                             json.dumps(report).encode() + run.stderr, raw.blob)
+        hidden = {"min": None, "max": None, "p50": None, "p95": None}
+        self.assertEqual(balance["numeric"], hidden)
+        for column in columns:
+            if column.get("numeric") is not None:
+                self.assertEqual(column["numeric"], hidden, column.get("id"))
+        # The control: --explicit still reports the number, so the null above is redaction.
+        explicit = raw.json()
+        explicit_columns = explicit.get("result", explicit)["columns"]
+        self.assertEqual(explicit_columns[source.COLUMNS.index("balance")]["numeric"]["max"],
+                         float(source.CANARY_AMOUNT_OLD))
+        self.assert_redacted(f"profile inspect {fmt}", run.blob, raw.blob)
 
     def test_04_fingerprint_peek_and_match(self):
         named = self.expect(self.ws.run("fingerprint", "--fp", "csv.v0", control=True, stdin=self.ws.run(
