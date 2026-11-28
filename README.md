@@ -65,7 +65,7 @@ While `cmdrvl` is under construction, the individual open-source tools are avail
 brew install cmdrvl/tap/{vacuum,cmdrvl-hash,fingerprint,profile,lock,shape,rvl,verify,cmdrvl-benchmark,assess,canon,pack,twinning,veil,airlock}
 ```
 
-See [github.com/cmdrvl](https://github.com/cmdrvl) for the full tool catalog and agent prompts.
+See [github.com/cmdrvl](https://github.com/cmdrvl) for the full tool catalog, and the [Agent Operator Guide (`AGENT_PROMPT.md`)](https://github.com/cmdrvl/.github/blob/main/profile/AGENT_PROMPT.md) or [System Prompt (`SYSTEM_PROMPT.md`)](https://github.com/cmdrvl/.github/blob/main/profile/SYSTEM_PROMPT.md) for AI coding agent usage.
 
 ---
 
