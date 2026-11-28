@@ -176,11 +176,11 @@ class TabularPipeline(E2ETestCase):
 
     def test_06_shape_messy_csv_dialect(self):
         run = self.ws.run("shape", "data/old.csv", "data/new.csv", "--key", "loan_id", "--json")
-        refusal = run.json().get("refusal") or {}
-        observed = (run.code, refusal.get("code"), (refusal.get("detail") or {}).get("candidates"),
-                    refusal.get("next_command", ""))
-        self.known("shape-quoted-newline-dialect",
-                   observed[:3] == (2, "E_DIALECT", ["0x09"]) and "--delimiter tab" in observed[3], observed)
+        self.expect(run, 0)
+        report = run.json()
+        self.assertEqual(report["outcome"], "COMPATIBLE")
+        self.assertEqual(report["dialect"]["old"]["delimiter"], ",")
+        self.assertEqual(report["dialect"]["new"]["delimiter"], ",")
         # rvl reads the same bytes without help.
         rvl = self.expect(self.ws.run("rvl", "data/old.csv", "data/new.csv", "--key", "loan_id", "--json"), 1)
         self.assertEqual(rvl.json()["outcome"], "REAL_CHANGE")
@@ -229,10 +229,12 @@ class TabularPipeline(E2ETestCase):
         shape = self.expect(ws.run(*self._shape_args(old, new, key=()), *profiled), 0)
         self.assertEqual(shape.json()["outcome"], "COMPATIBLE")
         verification = shape.json().get("input_verification")
-        self.known("shape-lock-verification-null", verification is None, verification)
+        self.assertIsNotNone(verification)
+        self.assertTrue(verification["verified"])
+        self.assertEqual(verification["matched_inputs"], {"old": old, "new": new})
+        self.assertEqual([item["path"] for item in verification["locks"]], [lock])
         if fmt != "csv":
-            dialect = (shape.json().get("dialect") or {}).get("old")
-            self.known("shape-non-csv-dialect", (dialect or {}).get("delimiter") == ",", dialect)
+            self.assertEqual(shape.json().get("dialect"), {"old": None, "new": None})
 
         rvl = self.expect(ws.run("rvl", old, new, "--json", *profiled), 1)
         self.assertEqual(rvl.json()["counts"]["numeric_cells_changed"], self.expected["numeric_cells_changed"])
@@ -302,8 +304,7 @@ class TabularPipeline(E2ETestCase):
             sorted(t["column"] for t in words["categorical_transitions"]),
             [(t["column"], t["changed_rows"]) for t in words["text_churn"]],
         )
-        self.known("rvl-non-numeric-stock-profile",
-                   observed == (2, ["u8:balance", "u8:balance"], [("u8:status", 1)]), observed)
+        self.assertEqual(observed, (1, ["u8:status"], []))
 
     def test_09_failing_rule_stays_redacted(self):
         for fmt in FORMATS:

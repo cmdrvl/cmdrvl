@@ -1,25 +1,5 @@
 {
   "known_failures": {
-    "shape-quoted-newline-dialect": {
-      "repo": "cmdrvl/shape",
-      "bead": "bd-u73r",
-      "summary": "A small comma CSV with a quoted line break is refused with E_DIALECT, and the suggested next command pins a tab delimiter."
-    },
-    "rvl-non-numeric-stock-profile": {
-      "repo": "cmdrvl/rvl",
-      "bead": "bd-a1h",
-      "summary": "With a profile from profile draft init and freeze, rvl --non-numeric reports numeric changes as categorical and hides the real status transition."
-    },
-    "shape-lock-verification-null": {
-      "repo": "cmdrvl/shape",
-      "bead": "bd-9pck",
-      "summary": "After a successful --lock check shape reports input_verification null, so the sealed report carries no lock provenance."
-    },
-    "shape-non-csv-dialect": {
-      "repo": "cmdrvl/shape",
-      "bead": "bd-9pck",
-      "summary": "For XLSX and Parquet input shape reports a CSV dialect."
-    },
     "veil-allows-explicit-on-protected": {
       "repo": "cmdrvl/veil",
       "bead": "bd-en1",
